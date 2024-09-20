@@ -39,6 +39,7 @@
 #include "bsec2.h"
 
 static uint8_t workBuffer[BSEC_MAX_WORKBUFFER_SIZE];
+static const char* TAG = "BSec2";
 
 /**
  * @brief Constructor of Bsec2 class
