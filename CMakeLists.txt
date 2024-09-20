@@ -1,4 +1,5 @@
 
+if(CONFIG_USE_SENSOR_BME680)
 idf_component_register(
   SRCS
     src/bsec2.cpp
@@ -12,4 +13,4 @@ idf_component_register(
 
 target_link_libraries(${COMPONENT_LIB}
   ${COMPONENT_DIR}/src/esp32/libalgobsec.a)
-
+endif()
