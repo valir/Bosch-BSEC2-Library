@@ -143,6 +143,7 @@ public:
         return nullptr;
     }
 
+#pragma GCC diagnostic ignored "-Wmissing-field-initializers"
     /**
      * @brief Function to get the BSEC output by sensor id
      * @return	pointer to BSEC output, nullptr otherwise
@@ -171,7 +172,7 @@ public:
      */
     bool setState(uint8_t *state);
 
-    /** 
+    /**
      * @brief Function to retrieve the current library configuration
      * @param config    : Pointer to a memory location, to hold the serialized config blob
      * @return	true for success, false otherwise
@@ -225,7 +226,7 @@ private:
      * If it overflows, it will have a negative value. Something that should never happen.
      */
     uint32_t ovfCounter;
-    
+
     uint32_t lastMillis;
     /* Pointer to hold the address of the instance */
     uint8_t *bsecInstance;
